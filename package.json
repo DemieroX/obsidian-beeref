@@ -1,0 +1,21 @@
+{
+  "name": "beeref-board",
+  "version": "0.1.7",
+  "description": "Open, edit and save BeeRef (.bee) reference boards inside Obsidian.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.21.5",
+    "obsidian": "^1.7.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "sql.js": "^1.13.0"
+  }
+}

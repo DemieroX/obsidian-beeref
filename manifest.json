@@ -1,0 +1,10 @@
+{
+  "id": "beeref-integration",
+  "name": "BeeRef Integration",
+  "version": "0.1.7",
+  "minAppVersion": "1.4.0",
+  "description": "Open, edit and save BeeRef (.bee) reference boards inside Obsidian.",
+  "author": "Demiero",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

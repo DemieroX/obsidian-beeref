@@ -1,0 +1,174 @@
+.workspace-leaf-content[data-type="beeref-board-view"] .view-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.beeref-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.beeref-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: none;
+  touch-action: none;
+  background: var(--background-primary);
+}
+
+.beeref-viewport canvas {
+  display: block;
+}
+
+.beeref-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--font-ui-medium);
+  pointer-events: none;
+}
+
+.beeref-hover-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+  border-radius: var(--radius-s);
+  padding: 3px;
+  display: none;
+  z-index: 5;
+}
+.beeref-hover-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.beeref-text-editor {
+  position: absolute;
+  z-index: 6;
+  color: var(--text-normal);
+  background: var(--background-modifier-border);
+  border: 1px solid var(--interactive-accent);
+  border-radius: 2px;
+  font: 12px var(--font-interface, system-ui), sans-serif;
+  line-height: 15px;
+  white-space: pre-wrap;
+  outline: none;
+  cursor: text;
+}
+
+/* image opacity dialog */
+.beeref-opacity-dialog {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+.beeref-opacity-panel {
+  min-width: 260px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-s);
+  padding: 16px 18px;
+}
+.beeref-opacity-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-normal);
+}
+.beeref-opacity-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.beeref-opacity-row input[type="range"] {
+  flex: 1;
+}
+.beeref-opacity-row input[type="number"] {
+  width: 56px;
+}
+.beeref-opacity-suffix {
+  color: var(--text-muted);
+}
+.beeref-opacity-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.beeref-opacity-actions button {
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+  border: none;
+  border-radius: var(--radius-s);
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.beeref-opacity-actions button.mod-cta {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+.beeref-opacity-actions button.mod-cta:hover {
+  background: var(--interactive-accent-hover);
+}
+
+/* inline embed preview (![[board.bee]]) */
+.beeref-embed {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: var(--background-primary);
+  max-width: 100%;
+  vertical-align: top;
+  transition: border-color 120ms ease;
+}
+.beeref-embed:hover {
+  border-color: var(--interactive-accent);
+}
+.beeref-embed-loading {
+  padding: 10px 14px;
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+.beeref-embed-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-primary);
+}
+.beeref-embed-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.beeref-embed-caption {
+  padding: 6px 10px;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  border-top: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+}
+.beeref-embed-count {
+  color: var(--text-faint);
+}
